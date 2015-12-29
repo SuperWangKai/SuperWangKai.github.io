@@ -98,6 +98,8 @@
 				//
 
 				window.addEventListener( 'resize', onWindowResize, false );
+				
+				//window.addEventListener( 'deviceorientation', onWindowDeviceOrientation, false );
 
 			}
 
@@ -146,6 +148,17 @@
 				}
 
 			}
+			
+			function onWindowDeviceOrientation( event ) {
+
+				if ( event.beta ) {
+
+				mouseX = Math.sin( event.gamma * Math.PI / 180 );
+				mouseY = Math.sin( ( Math.PI / 4 ) + event.beta * Math.PI / 180 );
+
+			}
+
+}
 
 			//
 
@@ -165,6 +178,8 @@
 
 				//group.rotation.x += 0.001;
 				//group.rotation.y += 0.002;
+				//window.ondeviceorientation =  function(e) 
+				
 
 				renderer.render( scene, camera );
 
