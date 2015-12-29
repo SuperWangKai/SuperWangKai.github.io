@@ -45,6 +45,8 @@
 
 			var windowHalfX = window.innerWidth / 2;
 			var windowHalfY = window.innerHeight / 2;
+			
+			var deltaX = 0, deltaY = 0
 
 			init();
 			animate();
@@ -153,8 +155,8 @@
 
 				if ( event.beta ) {
 
-				mouseX = Math.sin( event.gamma * Math.PI / 180 ) * windowHalfX;
-				mouseY = Math.sin( ( Math.PI / 4 ) + event.beta * Math.PI / 180 ) * windowHalfY;
+				mouseX = Math.sin( event.gamma * Math.PI / 180 );
+				mouseY = Math.sin( ( Math.PI / 4 ) + event.beta * Math.PI / 180 );
 
 			}
 
@@ -172,12 +174,12 @@
 
 			function render() {
 
-				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
-				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+				//camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+				//camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
 				camera.lookAt( scene.position );
 
-				//group.rotation.x += 0.001;
-				//group.rotation.y += 0.002;
+				group.rotation.x += deltaX;
+				group.rotation.y += deltaY;
 				//window.ondeviceorientation =  function(e) 
 				
 
