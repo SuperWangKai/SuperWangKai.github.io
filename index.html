@@ -26,15 +26,27 @@
 				font-size:20px
 
 			}
+			#audio {
+				position: absolute;
+				top: 50px;
+				width: 100%;
+				height:50px;
+			}
+			
 		</style>
 	</head>
+
 	<body>
 		<div id="info">
 			欢迎来到王凯的主页
 		</div>
-
+		<div id="audio">
+			<audio controls>
+			<source src="test_threejs/test.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
 		<script src="test_threejs/three.min.js"></script>
-
 		<script src="test_threejs/Projector.js"></script>
 		<script src="test_threejs/CanvasRenderer.js"></script>
 		<script>
