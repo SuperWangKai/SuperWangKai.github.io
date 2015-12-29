@@ -153,8 +153,8 @@
 
 				if ( event.beta ) {
 
-				mouseX = Math.sin( event.gamma * Math.PI / 180 );
-				mouseY = Math.sin( ( Math.PI / 4 ) + event.beta * Math.PI / 180 );
+				mouseX = Math.sin( event.gamma * Math.PI / 180 ) * windowHalfX;
+				mouseY = Math.sin( ( Math.PI / 4 ) + event.beta * Math.PI / 180 ) * windowHalfY;
 
 			}
 
